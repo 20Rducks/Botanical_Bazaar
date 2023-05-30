@@ -1,0 +1,27 @@
+<%# Main Card %>
+<div class="container">
+
+  <div class="row home-card">
+    <div class="col-sm-12 col-md-5 col-lg-5 flex-fill pl-4 pt-2">
+      <div class="home-card-img py-4 pl-4 align-middle">
+        <img class="card-img-top" src="<%= cl_image_path @plant.photos[0].key%>">
+        <div class="card-body text-center">
+          <h5 class="card-title"><%= @plant.species %></h5>
+          <p class="card-text"><%= @plant.description %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-7 col-lg-7">
+      <div class="row row-cols-1 row-cols-md-2 g-4 p-4">
+      <% @plant.photos.each_with_index do |photo, index| %>
+      <% next if index == 0 %>
+        <div class="col">
+          <div class="card">
+            <span><img class="card-img-top card-img-show" alt="plant image" src="<%= cl_image_path photo.key%>"></span>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

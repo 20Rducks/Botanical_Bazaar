@@ -1,33 +1,5 @@
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">BB Logo</a>
-    <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Plant..." aria-label="Search a plant">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-    <img class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <div class="btn-group">
-          <span class="avatar fa-solid fa-user dropdown-toggle mr-3" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"></span>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
-            <li><a class="dropdown-item" href="#">Sign Up</a></li>
-            <li><a class="dropdown-item" href="#">Login</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">List</a></li>
-            <li><a class="dropdown-item" href="#">Help</a></li>
-          </ul>
-        </div>
-        <li class="nav-item">
-          <a class="nav-link active mr-3" aria-current="page" href="#">Home</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<%# Rendering Navbar %>
+<%= render "shared/navbar" %>
 
 <%# Basic Hero/Jumbo/Header %>
 <div class="container">
@@ -38,60 +10,7 @@
   </div>
 </div>
 
-<%# Main Card %>
-<div class="container home-card">
-  <div class="row">
-    <div class="col-sm-12 col-md-4 col-lg-4 d-flex">
-      <div class="card home-card-img my-3 align-middle">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <%# <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> %>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-8 col-lg-8 my-3">
-      <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <%# <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p> %>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <%# <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p> %>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <%# <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p> %>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <%# <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p> %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<%# Add new input for photos %>
 
 <div class="new-plant-container">
   <div class="new-plant-form">
@@ -137,3 +56,6 @@
     <% end %>
   </div>
 </div>
+
+<%# Rendering Navbar %>
+<%= render "shared/footer" %>
