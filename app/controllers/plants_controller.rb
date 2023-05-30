@@ -1,6 +1,6 @@
 class PlantsController < ApplicationController
   # skip_before_action :authenticate_user!, only: :index
-  before_action :set_plant, only: [:show, :create, :destroy]
+  before_action :set_plant, only: %i[show create destroy]
 
   def index
     @plants = Plant.all
@@ -33,5 +33,4 @@ class PlantsController < ApplicationController
   def plant_params
     params.require(:plant).permit(:species, :photos, :price, :description)
   end
-
 end
