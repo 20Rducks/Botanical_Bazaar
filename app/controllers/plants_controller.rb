@@ -2,6 +2,10 @@ class PlantsController < ApplicationController
   # skip_before_action :authenticate_user!, only: :index
   before_action :set_plant, only: [:show, :create, :destroy]
 
+  def index
+    @plants = Plant.all
+  end
+
   def new
     @plant = Plant.new
   end
