@@ -45,7 +45,7 @@
   <div class="row">
     <div class="col-sm-12 col-md-4 col-lg-4 d-flex">
       <div class="card home-card-img my-3 align-middle">
-        <img src="..." class="card-img-top" alt="...">
+        <img class="card-img-top" src="<%= cl_image_path @plant.photos[0].key%>">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -55,44 +55,18 @@
 
     <div class="col-sm-12 col-md-8 col-lg-8 my-3">
       <div class="row row-cols-1 row-cols-md-2 g-4">
+      <% @plant.photos.each_with_index do |photo, index| %>
+      <% next if index == 0 %>
         <div class="col">
           <div class="card">
-            <img src="..." class="card-img-top" alt="...">
+            <span><img class="card-img-top" alt="..." src="<%= cl_image_path photo.key%>"></span>
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <% end %>
     </div>
   </div>
 </div>
@@ -137,6 +111,7 @@
     </div>
   </div>
 </div>
+
 
 <%# Footer %>
 <footer class="bg-light text-center text-white mt-3">
