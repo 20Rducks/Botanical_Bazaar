@@ -9,7 +9,7 @@ require 'open-uri'
 
 puts "Cleaning database..."
 
-user = User.create!(email: 'test@test.com', password: '123123', password_confirmation: '123123')
+user = User.create!(email: 'test2@test2.com', password: '123123', password_confirmation: '123123')
 
 Plant.destroy_all
 
