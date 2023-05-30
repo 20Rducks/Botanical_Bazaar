@@ -1,0 +1,20 @@
+.card-img-show {
+  max-height: 330px;
+}
+
+.home-card-img {
+  transition: 1s;
+  padding: 0;
+    &:hover {
+      box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
+      transform: scale(1.05);
+      cursor: pointer;
+  }
+}
+
+.info-card {
+  transition: none;
+  &:hover {
+    transform: none;
+  }
+}

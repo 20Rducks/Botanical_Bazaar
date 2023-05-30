@@ -1,8 +1,15 @@
 .home-card {
   border: 1px solid black;
   border-radius: 10px;
-}
+  align-content: stretch;
+  justify-content: space-around;
+  align-items: center;
+  }
 
-.home-card-img {
-  border: 1px solid black;
+// .home-card-img {
+//   border: 1px solid black;
+// }
+
+.card-body {
+  border: none;
 }

@@ -9,4 +9,7 @@
 
 .avatar {
   margin-top: 0.75rem!important;
+  &:hover{
+    cursor: pointer;
+  }
 }
