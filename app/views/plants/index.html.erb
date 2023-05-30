@@ -46,22 +46,24 @@
 
 
   <%# Card Layout %>
-
-    <% @plants.each do |plant| %>
-      <div class="col">
-        <div class="card h-100">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title"><%= plant.species %></h5>
-            <p class="card-text"><%= plant.description %></p>
+        <% @plants.each do |plant| %>
+      <%= link_to plant_path(plant) do %>
+          <div class="col">
+            <div class="card h-100">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><%= plant.species %></h5>
+                <p class="card-text"><%= plant.description %></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">5* Reviews</small>
+                <small class="text-muted">Price: £<%= plant.price %></small>
+              </div>
+            </div>
           </div>
-          <div class="card-footer">
-            <small class="text-muted">5* Reviews</small>
-            <small class="text-muted">Price: £<%= plant.price %></small>
-          </div>
-        </div>
+        <% end %>
+        <% end %>
       </div>
-    <% end %>
     </div>
   </div>
 </div>
