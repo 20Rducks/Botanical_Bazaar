@@ -32,7 +32,7 @@
 <%# Basic Hero/Jumbo/Header %>
 <div class="container">
   <div class="row">
-    <div class="jumbotron mt-2 p-4">
+    <div class="jumbotron mt-2">
       <h2>##Plant Name##</h2>
       <p>##Plant Description</p>
     </div>
@@ -40,11 +40,11 @@
 </div>
 
 <%# Main Card %>
-<div class="container home-card">
+<div class="container">
 
-  <div class="row">
+  <div class="row home-card">
     <div class="col-sm-12 col-md-4 col-lg-4 d-flex">
-      <div class="card home-card-img my-3 align-middle">
+      <div class="card home-card-img py-3 align-middle">
         <img class="card-img-top" src="<%= cl_image_path @plant.photos[0].key%>">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -71,11 +71,11 @@
   </div>
 </div>
 
-<div class="container mt-4">
+<div class="container mt-4 mr-3">
   <div class="row">
 
     <%# Info Card %>
-    <div class="col-sm-12 col-md-6 col-lg-6 info-card p-2">
+    <div class="col-sm-12 col-md-6 col-lg-6 info-card p-3">
       <div class="card home-card-img my-1 align-middle">
         <div class="card-body">
           <div>
@@ -116,7 +116,7 @@
 <%# Footer %>
 <footer class="bg-light text-center text-white mt-3">
   <!-- Grid container -->
-  <div class="container p-4 pb-0">
+  <div class="container-fluid p-4 pb-0">
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->

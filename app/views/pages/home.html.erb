@@ -39,105 +39,26 @@
   </div>
 </div>
 
-<%# Main Card %>
-<div class="container home-card">
 
-  <div class="row">
-    <div class="col-sm-12 col-md-4 col-lg-4 d-flex">
-      <div class="card home-card-img my-3 align-middle">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
+<%# Main Card %>
+<div class="container">
 
     <div class="col-sm-12 col-md-8 col-lg-8 my-3">
       <div class="row row-cols-1 row-cols-md-2 g-4">
+      <% @plants.each do |plant| %>
         <div class="col">
           <div class="card">
-            <img src="..." class="card-img-top" alt="...">
+            <span><img class="card-img-top" alt="..." src="<%= cl_image_path plant.photos.first.key%>"></span>
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <% end %>
     </div>
   </div>
 </div>
-
-<div class="container mt-4">
-  <div class="row">
-
-    <%# Info Card %>
-    <div class="col-sm-12 col-md-6 col-lg-6 info-card p-2">
-      <div class="card home-card-img my-1 align-middle">
-        <div class="card-body">
-          <div>
-            <i class="fa-solid fa-user float-end mr-2 p-3 bg-secondary rounded-circle"></i>
-          </div>
-          <div>
-            <h5 class="card-title">Species Name: ####</h5>
-            <p class="card-text pr-5">Owned by: ####</p>
-          </div>
-        </div>
-      </div>
-      <div class="card home-card-img my-1 align-middle">
-        <div class="card-body">
-          <h5 class="card-title">Plant Description</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-      <div class="card home-card-img my-1 align-middle">
-        <div class="card-body">
-          <h5 class="card-title">Things to know</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
-
-    <%# Spacer for mid section %>
-    <div class="col-sm-0 col-md-2 col-lg-2 d-flex">
-    </div>
-
-    <%# Payment Card %>
-    <div class="col-sm-12 col-md-4 col-lg-4 d-flex payment-card">
-      <p>Hello</p>
-    </div>
-  </div>
-</div>
-
 
 <%# Footer %>
 <footer class="bg-light text-center text-white mt-3">
