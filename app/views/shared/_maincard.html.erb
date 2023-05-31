@@ -4,7 +4,7 @@
   <div class="row home-card">
     <div class="col-sm-12 col-md-5 col-lg-5 flex-fill pl-4 pt-2">
       <div class="py-4 pl-4 align-middle">
-        <img class="card-img-top" src="<%=  @plant.photos[0].key%>">
+        <%= cl_image_tag @plant.photos[0].key, class: "card-img-top" %>
         <div class="card-body text-center">
           <h5 class="card-title"><%= @plant.species %></h5>
           <p class="card-text"><%= @plant.description %></p>
@@ -18,7 +18,7 @@
       <% next if index == 0 %>
         <div class="col">
           <div class="card">
-            <span><%= cl_image_tag plant.photos.first.key, class: "card-img-top home-card-img"%></span>
+            <span><%= cl_image_tag photo.key, class: "card-img-top home-card-img"%></span>
           </div>
         </div>
       <% end %>
