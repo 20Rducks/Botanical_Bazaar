@@ -2,6 +2,7 @@
   <div class="container-fluid">
     <a class="nav-link active mr-3" aria-current="page" href="/"><%= image_tag "logo-1.png" , class: 'logo' %></a>
     <%# Add to href link %>
+
     <form class="d-flex">
       <input class="form-control me-2" type="search" placeholder="Spider Plant..." aria-label="Search a plant">
       <button class="btn btn-outline-success" type="submit"><%= link_to "search", plants_path %></button>
@@ -18,7 +19,7 @@
             <li><a class="dropdown-item" href="../users/sign_up">Sign Up</a></li> <%# Need to add proper path %>
             <li><a class="dropdown-item" href="#">Login</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">My Listings</a></li>
+            <li><%= link_to "My Listings", my_listings_plants_path, class: "dropdown-item"%></li>
             <li><a class="dropdown-item" href="#">Help</a></li>
           </ul>
         </div>
