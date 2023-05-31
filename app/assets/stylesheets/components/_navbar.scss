@@ -9,16 +9,24 @@
 
 #avatar-drop {
   display: inline;
-  width: 50px !important;
+  width: 33px !important;
   color: #48ad6b;
-  margin-top: 0.75rem!important;
   &:hover{
     cursor: pointer;
   }
 }
 
 .dropdown-toggle {
-  &:after {
-  display: none !important;
-  }
+  width: 33px;
 }
+
+.fa-2xl {
+  font-size: 3em !important;
+}
+
+
+// .dropdown-toggle {
+//   &:after {
+//   display: none !important;
+//   }
+// }
