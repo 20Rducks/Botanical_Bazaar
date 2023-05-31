@@ -1,11 +1,21 @@
 .home-card {
   border: 1px solid black;
   border-radius: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-content: stretch;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   }
 
 .card-body {
   border: none;
 }
+
+.inner-cards {
+  align-items:center;
+}
+
+// .inner-cards.img {
+//   object-fit: fill !important;
+// }
