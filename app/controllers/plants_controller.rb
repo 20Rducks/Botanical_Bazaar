@@ -24,6 +24,11 @@ class PlantsController < ApplicationController
     redirect_to plants_path, status: :see_other
   end
 
+  def my_listings
+    # @plants = Plant.all
+    @my_plants = current_user.plants
+  end
+
   private
 
   def set_plant

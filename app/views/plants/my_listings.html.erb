@@ -1,0 +1,52 @@
+<%# Rendering Navbar %>
+<%= render "shared/navbar" %>
+
+
+<%# Basic Hero/Jumbo/Header %>
+<div class="container">
+  <div class="row">
+    <div class="jumbotron mt-2 p-4">
+      <h2>My Listings</h2>
+    </div>
+  </div>
+</div>
+
+<%# Card Group Layout %>
+<div class="container">
+  <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+
+  <%# Card Layout %>
+<% @my_plants.each do |plant| %>
+  <%= link_to plant_path(plant) do %>
+    <div class="col">
+      <div class="card h-100">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= plant.species %></h5>
+          <p class="card-text"><%= plant.description %></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">5* Reviews</small>
+          <small class="text-muted">Price: £<%= plant.price %></small>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+
+<%# Add new listing button, taking you to new listing/new plant page%>
+<div class="container">
+  <div class="row">
+      <div class="jumbotron mt-2 p-4">
+        <%= link_to "Add a new listing", new_plant_path, class: "btn btn-flat btn btn-dark text-white" %>
+      </div>
+    </div>
+</div>
+
+<%# Rendering Navbar %>
+<%= render "shared/footer" %>
+
+
+<%# the link to this page! %>
+<%# <%= link_to "My Listings", my_listings_plants_path %>

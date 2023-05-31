@@ -5,12 +5,14 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
 require 'open-uri'
 
 puts "Cleaning database..."
 
 user = User.create!(email: 'test2@test2.com', password: '123123', password_confirmation: '123123')
 
+User.destroy_all
 Plant.destroy_all
 
 puts "Creating Plants"
