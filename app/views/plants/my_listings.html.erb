@@ -21,7 +21,7 @@
   <%= link_to plant_path(plant) do %>
     <div class="col">
       <div class="card h-100">
-        <img src="..." class="card-img-top" alt="...">
+        <span><img class="card-img-top" alt="..." src="<%= cl_image_path plant.photos.first.key%>"></span>
         <div class="card-body">
           <h5 class="card-title"><%= plant.species %></h5>
           <p class="card-text"><%= plant.description %></p>
