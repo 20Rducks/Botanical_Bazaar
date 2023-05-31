@@ -28,7 +28,7 @@
           <div class="row">
             <div class="jumbotron mt-2 p-4">
               <h2>Add a photo</h2>
-              <%= f.input  :photos, as: :file, label: false, placeholder: "eg. Beautiful Plant" %>
+              <%= f.input :photos, as: :file, label: false, placeholder: "eg. Beautiful Plant", input_html: { multiple: true } %>
             </div>
           </div>
         </div>
@@ -51,7 +51,6 @@
             </div>
           </div>
         </div>
-      </div>
 
         <div class="container">
           <div class="row">
@@ -61,7 +60,6 @@
           </div>
         </div>
       </div>
-
     <% end %>
   </div>
 </div>

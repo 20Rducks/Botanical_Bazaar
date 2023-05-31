@@ -1,6 +1,6 @@
 class PlantsController < ApplicationController
   # skip_before_action :authenticate_user!, only: :index
-  before_action :set_plant, only: %i[show create destroy]
+  before_action :set_plant, only: %i[show destroy]
 
   def index
     @plants = Plant.all
@@ -12,6 +12,7 @@ class PlantsController < ApplicationController
 
   def create
     @plant = Plant.new(plant_params)
+    @plant.user = current_user
     if @plant.save
       redirect_to plant_path(@plant)
     else
@@ -25,7 +26,6 @@ class PlantsController < ApplicationController
   end
 
   def my_listings
-    # @plants = Plant.all
     @my_plants = current_user.plants
   end
 
@@ -36,6 +36,6 @@ class PlantsController < ApplicationController
   end
 
   def plant_params
-    params.require(:plant).permit(:species, :photos, :price, :description)
+    params.require(:plant).permit(:species, :price, :description, photos: [])
   end
 end
