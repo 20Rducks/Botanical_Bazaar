@@ -19,7 +19,7 @@
 
     <%# Info Card %>
     <div class="col-sm-12 col-md-6 col-lg-6 info-card px-3">
-      <div class="card home-card-img my-1 align-middle p-2 my-3">
+      <div class="card my-1 align-middle p-2 my-3">
         <div class="card-body">
           <div>
             <i class="fa-solid fa-user float-end mr-2 p-2 bg-secondary rounded-circle"></i>
@@ -30,13 +30,13 @@
           </div>
         </div>
       </div>
-      <div class="card home-card-img my-1 align-middle p-2 my-3">
+      <div class="card my-1 align-middle p-2 my-3">
         <div class="card-body">
           <h5 class="card-title">Plant Description</h5>
           <p class="card-text"><%= @plant.description %></p>
         </div>
       </div>
-      <div class="card home-card-img my-1 align-middle p-2 my-3">
+      <div class="card my-1 align-middle p-2 my-3">
         <div class="card-body">
           <h5 class="card-title">Extra Information</h5>
           <p class="card-text">This plant needs a lot of care, don't forget to walk it daily</p>
@@ -49,8 +49,28 @@
       </div>
 
       <%# Payment Card %>
-      <div class="col-sm-12 col-md-4 col-lg-4 d-flex payment-card">
-        <p>Hello</p>
+      <div class="col-sm-12 col-md-4 col-lg-4 d-flex p-2 payment-card">
+        <div class="card text-center">
+          <div class="card-header">
+            <h3>Price per day</h3>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><%= @plant.species %></h5>
+            <p class="card-text">£5.00</p> <%# Add price %>
+          </div>
+        </div>
+        <div class="card text-center">
+          <div class="card-header">
+            <h3>Total Price</h3>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Full Pricing</h5>
+            <p class="card-text">5 Days x £5.00 </p>  <%# Add days %>
+            <a href="#"  class="btn btn-primary">Confirm</a>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </div>

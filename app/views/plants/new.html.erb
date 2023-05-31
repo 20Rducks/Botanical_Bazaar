@@ -10,8 +10,6 @@
   </div>
 </div>
 
-<%# Add new input for photos %>
-
 <div class="new-plant-container">
   <div class="new-plant-form">
     <%= simple_form_for @plant do |f| %>
@@ -24,6 +22,17 @@
             </div>
           </div>
         </div>
+
+        <%# Add new input for photos %>
+        <div class="container">
+          <div class="row">
+            <div class="jumbotron mt-2 p-4">
+              <h2>Add a photo</h2>
+              <%= f.input  :photos, as: :file, label: false, placeholder: "eg. Beautiful Plant" %>
+            </div>
+          </div>
+        </div>
+
 
         <div class="container">
           <div class="row">

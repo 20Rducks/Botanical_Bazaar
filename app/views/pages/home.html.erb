@@ -18,7 +18,7 @@
   <% @plants.each do |plant| %>
   <%= link_to plant_path(plant) do %>
     <div class="col p-0">
-      <div class="card">
+      <div class="card home-card-img">
         <span><img class="card-img-top" alt="..." src="<%= cl_image_path plant.photos.first.key%>"></span>
         <div class="card-body">
           <h5 class="card-title"><%= plant.species  %></h5>

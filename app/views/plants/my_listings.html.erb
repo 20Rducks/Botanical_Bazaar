@@ -34,6 +34,7 @@
     </div>
   <% end %>
 <% end %>
+</div>
 
 <%# Add new listing button, taking you to new listing/new plant page%>
 <div class="container">
@@ -42,11 +43,8 @@
         <%= link_to "Add a new listing", new_plant_path, class: "btn btn-flat btn btn-dark text-white" %>
       </div>
     </div>
+    </div>
 </div>
 
 <%# Rendering Navbar %>
 <%= render "shared/footer" %>
-
-
-<%# the link to this page! %>
-<%# <%= link_to "My Listings", my_listings_plants_path %>

@@ -16,14 +16,17 @@
           <span id="avatar-drop" class="fa-brands fa-pagelines fa-2xl dropdown-toggle mr-5" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"></span>
           </button>
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start mt-3">
-            <li><a class="dropdown-item" href="../users/sign_up">Sign Up</a></li> <%# Need to add proper path %>
-            <li><a class="dropdown-item" href="#">Login</a></li>
+            <% if current_user %>
+              <li><%= link_to 'Sign Out', destroy_user_session_path, class: 'dropdown-item',  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %></li>
+            <% else %>
+              <li><a class="dropdown-item" href="../users/sign_up">Sign Up</a></li> <%# Need to add proper path %>
+              <li><a class="dropdown-item" href='/users/sign_in'>Sign In</a></li>
+            <% end %>
             <li><hr class="dropdown-divider"></li>
             <li><%= link_to "My Listings", my_listings_plants_path, class: "dropdown-item"%></li>
             <li><a class="dropdown-item" href="#">Help</a></li>
           </ul>
         </div>
-        <%# <span class="fa-solid fa-hand-holding-seedling"></span> %>
       </ul>
     </div>
   </div>
