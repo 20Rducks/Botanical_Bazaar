@@ -7,9 +7,18 @@
   flex-grow: 0;
 }
 
-.avatar {
+#avatar-drop {
+  display: inline;
+  width: 50px !important;
+  color: #48ad6b;
   margin-top: 0.75rem!important;
   &:hover{
     cursor: pointer;
+  }
+}
+
+.dropdown-toggle {
+  &:after {
+  display: none !important;
   }
 }
