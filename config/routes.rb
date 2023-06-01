@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "my_listings/plants", to: "plants#my_listings"
 
   resources :plants, only: %i[index show new create destroy] do
-    resources :bookings, only: %i[new create]
+    resources :bookings, only: %i[create]
   end
   resources :bookings, only: %i[show index]
 end

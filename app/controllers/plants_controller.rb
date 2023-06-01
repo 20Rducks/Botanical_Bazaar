@@ -29,6 +29,11 @@ class PlantsController < ApplicationController
     @plant = Plant.new
   end
 
+  def show
+    @bookings = Booking.all
+    @booking = Booking.new
+  end
+
   def new
     @plant = Plant.new
   end

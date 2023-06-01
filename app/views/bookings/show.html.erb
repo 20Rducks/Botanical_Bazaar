@@ -1,0 +1,39 @@
+<%# Rendering Navbar %>
+<%= render "shared/navbar" %>
+
+<%# Basic Hero/Jumbo/Header %>
+<div class="container">
+  <div class="row">
+    <div class="jumbotron mt-2">
+      <h2><%= @booking.plant.species %></h2>
+      <p><%= @booking.plant.description %></p>
+    </div>
+  </div>
+</div>
+
+
+<%# Card Group Layout %>
+<div class="container">
+  <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 g-4">
+
+
+
+  <%# Card Layout %>
+    <div class="col">
+      <div class="card home-card-img h-100">
+        <%= cl_image_tag @booking.plant.photos.first.key, class: "card-img-top"%>
+        <div class="card-body">
+          <h5 class="card-title"><%= @booking.plant.species %></h5>
+          <p class="card-text"><%= @booking.plant.description %></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">5* Reviews</small>
+          <small class="text-muted">Price: £<%= @booking.plant.price %></small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%# Rendering Navbar %>
+<%= render "shared/footer" %>
