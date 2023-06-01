@@ -11,6 +11,19 @@
   </div>
 </div>
 
+<div data-controller="insert-in-list">
+
+  <div class="c-modal show" data-insert-in-list-target="modal">
+      <%= cl_image_tag @plant.photos[0].key, class: "modal-img" %>
+      <p>£<%= @plant.price %> per day</p>
+      <%= render "bookings/form" %>
+  </div>
+
+    <div class="c-modal" data-insert-in-list-target="modal2">
+  </div>
+
+</div>
+
 <%# Render Main Card %>
 <%= render "shared/maincardshow" %>
 
@@ -63,24 +76,18 @@
           <div class="card-header">
             <h3>Total Price</h3>
           </div>
-          <div class="card-body">
+          <div class="card-body" id="monuments" data-insert-in-list-target="items">
             <h5 class="card-title"></h5>
             <p class="card-text"></p>  <%# Add days %>
-
-            <div data-controller="toggle" class="mt-5">
-              <div data-toggle-target="togglableElement" class="d-none">
-                <%= render "shared/form", booking: @booking, class: "d-none" %>
-              </div>
-            <button data-action="click->toggle#fire" data-toggle-target="togglableElement" class="btn btn-primary">Confirm</button>
             </div>
-
-
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
 
 <%# Rendering Navbar %>
 <%= render "shared/footer" %>
