@@ -1,0 +1,16 @@
+.c-modal {
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+  width: 500px;
+  height: 800px;
+  top: 50%;
+  transform: translate(-500%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 2px rgba($color: black, $alpha: 1.0);
+  transition: transform .5s ease;
+  &.show {
+    transform: translate(-50%, -50%);
+  }
+}
