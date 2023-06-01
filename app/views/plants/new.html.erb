@@ -1,7 +1,7 @@
+
 <%# Rendering Navbar %>
 <%= render "shared/navbar" %>
 
-<%# Basic Hero/Jumbo/Header %>
 <div class="container">
   <div class="row">
     <div class="jumbotron mt-2 p-4">
@@ -16,36 +16,26 @@
       <div class="modal-body">
         <div class="container">
           <div class="row">
-            <div class="jumbotron mt-2 p-4">
+            <div class="col-md-6 jumbotron mt-2 mb-3 p-4">
               <h2>Species</h2>
               <%= f.input :species, label: false, placeholder: 'eg. Spider Plant' %>
             </div>
-          </div>
-        </div>
 
-        <%# Add new input for photos %>
-        <div class="container">
-          <div class="row">
-            <div class="jumbotron mt-2 p-4">
+            <div class="col-md-6 jumbotron mt-2 mb-3 p-4">
               <h2>Add a photo</h2>
               <%= f.input :photos, as: :file, label: false, placeholder: "eg. Beautiful Plant", input_html: { multiple: true } %>
             </div>
           </div>
         </div>
 
-
         <div class="container">
           <div class="row">
-            <div class="jumbotron mt-2 p-4">
+            <div class="col-md-6 jumbotron mt-2 mb-3 p-4">
               <h2>Description</h2>
               <%= f.input :description, label: false, placeholder: "eg. Introducing a stunning Spider Plant that will effortlessly elevate any space with its graceful beauty! This vibrant and healthy Chlorophytum comosum, lovingly nurtured, is ready to become the crowning jewel of your indoor garden" %>
             </div>
-          </div>
-        </div>
 
-        <div class="container">
-          <div class="row">
-            <div class="jumbotron mt-2 p-4">
+            <div class="col-md-6 jumbotron mt-2 mb-3 p-4">
               <h2>Price</h2>
               <%= f.input :price, label: false, placeholder: '£' %>
             </div>
@@ -54,7 +44,7 @@
 
         <div class="container">
           <div class="row">
-            <div class="jumbotron mt-2 p-4">
+            <div class="col-md-12 jumbotron mt-2 mb-3 p-4 text-center">
               <%= f.submit "Add listing", class: "btn btn-flat btn btn-dark text-white" %>
             </div>
           </div>
