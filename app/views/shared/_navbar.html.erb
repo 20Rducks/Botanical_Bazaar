@@ -2,11 +2,10 @@
   <div class="container-fluid">
     <a class="nav-link active mr-3" aria-current="page" href="/"><%= image_tag "logo-1.png" , class: 'logo' %></a>
     <%# Add to href link %>
-
-    <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Spider Plant..." aria-label="Search a plant">
-      <button class="btn btn-outline-success" type="submit"><%= link_to "search", plants_path %></button>
-    </form>
+    <%= form_with url: plants_path, method: :get, class: "d-flex" do |form| %>
+      <%= form.text_field :query, value: params[:query], class: "form-control me-2", placeholder: "Find a plant" %>
+      <%= form.submit "Search", class: "btn btn-outline-success" %>
+    <% end %>
     <img class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -21,10 +20,11 @@
               <li><a class="dropdown-item" href='/users/sign_in'>Log In</a></li>
             <% else %>
               <li><%= link_to "My Listings", my_listings_plants_path, class: "dropdown-item"%></li>
-              <li><%= link_to 'Sign Out', destroy_user_session_path, class: 'dropdown-item',  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %></li>
+              <li><%= link_to "Add New Listing", new_plant_path, class: "dropdown-item"%></li>
+              <li><a class="dropdown-item" href="#">Help</a></li>
             <% end %>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Help</a></li>
+            <li><%= link_to 'Sign Out', destroy_user_session_path, class: 'dropdown-item',  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %></li>
           </ul>
         </div>
       </ul>

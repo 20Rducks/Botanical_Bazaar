@@ -11,30 +11,28 @@
   </div>
 </div>
 
-
 <%# Main Card %>
 <div class="container">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 rails-lg-3 row-cols-xl-4 g-4">
-  <% @plants.each do |plant| %>
-  <%= link_to plant_path(plant) do %>
-    <div class="col p-0">
-      <div class="card home-card-img">
-        <span><img class="card-img-top" alt="..." src="<%= cl_image_path plant.photos.first.key%>"></span>
-        <div class="card-body">
-          <h5 class="card-title"><%= plant.species  %></h5>
-          <p class="card-text"><%= plant.description %></p>
+    <% @plants.sort_by(&:created_at).each do |plant| %>
+      <%= link_to plant_path(plant) do %>
+        <div class="col p-0">
+          <div class="card home-card-img mb-4">
+            <span><img class="card-img-top" alt="..." src="<%= cl_image_path plant.photos.first.key%>"></span>
+            <div class="card-body">
+              <h5 class="card-title"><%= plant.species  %></h5>
+              <p class="card-text"><%= plant.description %></p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">5* Reviews</small>
+              <small class="text-muted">Price: £<%= plant.price %></small>
+            </div>
+          </div>
         </div>
-        <div class="card-footer">
-          <small class="text-muted">5* Reviews</small>
-          <small class="text-muted">Price: £<%= plant.price %></small>
-        </div>
-      </div>
-    </div>
-  <% end %>
-  <% end %>
+      <% end %>
+    <% end %>
+  </div>
 </div>
-</div>
-
 
 <%# Rendering Navbar %>
 <%= render "shared/footer" %>

@@ -13,7 +13,7 @@
 
 <%# Card Group Layout %>
 <div class="container">
-  <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+  <div class="row row-cols-2 row-cols-md-3 mb-4 row-cols-lg-4 g-4">
 
 
   <%# Card Layout %>
@@ -23,12 +23,13 @@
       <div class="card h-100">
         <span><%= cl_image_tag plant.photos.first.key, class: "card-img-top"%></span>
         <div class="card-body">
-          <h5 class="card-title"><%= plant.species %></h5>
+          <h5 class="card-title"><%= plant.species %>
           <p class="card-text"><%= plant.description %></p>
         </div>
         <div class="card-footer">
           <small class="text-muted">5* Reviews</small>
           <small class="text-muted">Price: £<%= plant.price %></small>
+          <small class="text-right flex-shrink-0"><%= link_to "delete", plant_path(plant), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{plant.species} from your listings?"}, class: 'text-danger'%></small></h5>
         </div>
       </div>
     </div>
