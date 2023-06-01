@@ -4,6 +4,7 @@ class PlantsController < ApplicationController
 
   def index
     @plants = Plant.all
+    @plant = Plant.new
   end
 
   def new

@@ -12,7 +12,7 @@
 </div>
 
 <%# Render Main Card %>
-<%= render "shared/maincard" %>
+<%= render "shared/maincardshow" %>
 
 <div class="container mt-4 mr-3">
   <div class="row">
@@ -56,7 +56,7 @@
           </div>
           <div class="card-body">
             <h5 class="card-title"><%= @plant.species %></h5>
-            <p class="card-text">£5.00</p> <%# Add price %>
+            <p class="card-text">£<%= @plant.price %></p>
           </div>
         </div>
         <div class="card text-center">
@@ -64,13 +64,19 @@
             <h3>Total Price</h3>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Full Pricing</h5>
-            <p class="card-text">5 Days x £5.00 </p>  <%# Add days %>
-            <a href="#"  class="btn btn-primary">Confirm</a>
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>  <%# Add days %>
+
+            <div data-controller="toggle" class="mt-5">
+              <div data-toggle-target="togglableElement" class="d-none">
+                <%= render "shared/form", booking: @booking, class: "d-none" %>
+              </div>
+            <button data-action="click->toggle#fire" data-toggle-target="togglableElement" class="btn btn-primary">Confirm</button>
+            </div>
+
+
           </div>
         </div>
-
-
       </div>
     </div>
   </div>
