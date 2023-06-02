@@ -17,30 +17,37 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 jumbotron mt-2 mb-3 p-4">
-              <h2>Species</h2>
+              <h2 class="d-inline">Species</h2>
+               <span>
+                <i class="fa-solid fa-leaf fa-2xl" style="color: #3a5a40;"></i>
+              </span>
               <%= f.input :species, label: false, placeholder: 'eg. Spider Plant' %>
             </div>
 
-            <div class="col-md-6 jumbotron mt-2 mb-3 p-4">
-              <h2>Add a photo</h2>
-              <%= f.input :photos, as: :file, label: false, placeholder: "eg. Beautiful Plant", input_html: { multiple: true } %>
-            </div>
-          </div>
+        <div class="col-md-6 jumbotron mt-2 mb-3 p-4">
+          <h2 class="d-inline">Upload photos</h2>
+          <span class="ml-2">
+            <i class="far fa-image fa-2x" style="color: #3a5a40;"></i>
+          </span>
+          <%= f.input :photos, as: :file, label: false, placeholder: "eg. Beautiful Plant", input_html: { multiple: true } %>
         </div>
 
         <div class="container">
           <div class="row">
             <div class="col-md-6 jumbotron mt-2 mb-3 p-4">
-              <h2>Description</h2>
+             <h2 class="d-inline">Description</h2>
+              <span class="ml-2">
+               <i class="fa-solid fa-quote-left fa-2xl" style="color: #3a5a40;"></i>
+              </span>
               <%= f.input :description, label: false, placeholder: "eg. Introducing a stunning Spider Plant that will effortlessly elevate any space with its graceful beauty! This vibrant and healthy Chlorophytum comosum, lovingly nurtured, is ready to become the crowning jewel of your indoor garden" %>
             </div>
 
-            <div class="col-md-6 jumbotron mt-2 mb-3 p-4">
-              <h2>Price</h2>
-              <i class="fa-solid fa-image"></i>
-              <%= f.input :price, label: false, placeholder: '£' %>
-            </div>
-          </div>
+        <div class="col-md-6 jumbotron mt-2 mb-3 p-4">
+          <h2 class="d-inline">Price</h2>
+            <span class="ml-2">
+              <i class="fa-solid fa-tag fa-2xl" style="color: #3a5a40;"></i>
+            </span>
+          <%= f.input :price, label: false, placeholder: '£' %>
         </div>
 
         <div class="container">
