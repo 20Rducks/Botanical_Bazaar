@@ -28,8 +28,9 @@
           <p class="card-text"><%= plant.description %></p>
         </div>
         <div class="card-footer">
-          <small class="text-muted">5* Reviews</small>
-          <small class="text-muted">Price: £<%= plant.price %></small>
+          <small class="text-muted"></small><i class="fas fa-star star-yellow"></i>
+          <small class="text-muted"></small><i class="fas fa-quote-left me-2"></i>
+          <small class="text-muted">£</i><%= plant.price %></small>
           <small class="text-right flex-shrink-0"><%= link_to "delete", plant_path(plant), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{plant.species} from your listings?"}, class: 'text-danger'%></small></h5>
         </div>
       </div>
