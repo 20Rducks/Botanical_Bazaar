@@ -10,7 +10,7 @@
     <p>Embrace the eco-friendly lifestyle</p>
     <%= form_with url: plants_path, method: :get, class: "form-flex pt-4 align-center mx-auto" do |form| %>
       <%= form.text_field :query, value: params[:query], class: "form-control me-2", placeholder: "Find a plant..." %>
-      <%= form.submit "Search", class: "button" %>
+      <%= form.submit "Search", class: "button mt-2" %>
     <% end %>
   </div>
 </div>
