@@ -20,7 +20,7 @@
 <%# Main Card %>
 <div class="container">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 rails-lg-3 row-cols-xl-4 g-4">
-    <% @plants.sort_by(&:created_at).each do |plant| %>
+    <% @plants.each do |plant| %>
       <%= link_to plant_path(plant) do %>
         <div class="col p-0">
           <div class="card home-card-img mb-4">
@@ -30,8 +30,9 @@
               <p class="card-text"><%= plant.description %></p>
             </div>
             <div class="card-footer">
-              <small class="text-muted">5* Reviews</small>
-              <small class="text-muted">Price: £<%= plant.price %></small>
+              <small class="text-muted"></small><i class="fas fa-star star-yellow"></i>
+              <small class="text-muted"></small><i class="fas fa-quote-left me-2"></i>
+              <small class="text-muted">£</i><%= plant.price %></small>
             </div>
           </div>
         </div>

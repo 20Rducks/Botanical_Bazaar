@@ -25,7 +25,7 @@ class PlantsController < ApplicationController
     else
       @plants = Plant.all
     end
-    @plants = @plants.sort_by(&:created_at)
+    @plants = @plants.sort_by(&:created_at).reverse
     @plant = Plant.new
   end
 
