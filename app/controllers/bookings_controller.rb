@@ -22,8 +22,9 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     respond_to do |format|
       if @booking.save
-        format.html { redirect_to booking_path(@booking) }
+        format.html 
         format.json # Follows the classic Rails flow and look for a create.json view
+
       else
         format.html { render "bookings", status: :unprocessable_entity }
         format.json # Follows the classic Rails flow and look for a create.json view

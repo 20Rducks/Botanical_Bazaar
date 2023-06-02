@@ -1,2 +1,11 @@
-<h3>Thanks you</h3>
-<p>Youve booked <%= booking.plant%></p>
+</div>
+  <h3>Thank you for using Botanical Bazaar</h3>
+  <p>Youve just booked a <%= booking.plant.species%></p>
+  <%= cl_image_tag booking.plant.photos[0].key, class: "modal-img" %>
+  <h5>For <div class="d-inline" data-insert-in-list-target='days'></div> days</h5>
+  <div>
+    <button class="btn"><%= link_to "Keep Searching!", plants_path %></button>
+    <br>
+    <button class="btn"><%= link_to "My Bookings", bookings_path %></button>
+  </div>
+</div>
