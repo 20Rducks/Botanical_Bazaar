@@ -1,5 +1,3 @@
-
-
 require 'open-uri'
 
 puts "Cleaning database..."
@@ -7,35 +5,7 @@ puts "Cleaning database..."
 User.destroy_all
 Plant.destroy_all
 
-user = User.create!(email: 'tesfet2@teldst2.com', password: '123123', password_confirmation: '123123')
-plant = Plant.create!(species: "Swiss Cheese Plant", price: 150, description: "Lovely swiss cheese plant to rent, comes with a block of cheese", user_id: user.id)
-5.times do
-  file = URI.open('https://www.gardeningknowhow.com/wp-content/uploads/2012/01/peace-lily-1.jpg')
-  plant.photos.attach(io: file, filename: "plant.jpg", content_type: 'images/jpg')
-end
-plant.save
-
-
-
-
-
-user = User.create!(email: 'tesfet3@teldst3.com', password: '123123', password_confirmation: '123123')
-plant = Plant.create!(species: "Swiss Cheese Plant", price: 150, description: "Lovely swiss cheese plant to rent, comes with a block of cheese", user_id: user.id)
-file = URI.open('https://www.gardeningknowhow.com/wp-content/uploads/2012/01/peace-lily-1.jpg')
-plant.photos.attach(io: file, filename: "plant.jpg", content_type: 'images/jpg')
-plant.save
-
-puts "Plants Created"
-
-5.times do
-  plant = Plant.create!(species: "Swiss Cheese Plant", price: 150, description: "Lovely swiss cheese plant to rent, comes with a block of cheese", user_id: user.id)
-  5.times do
-    file = URI.open('https://www.gardeningexpress.co.uk/media/product/6e8/echinocactus-grusonii-golden-barrel-cactus-or-mother-in-laws-seat-c3f.jpg')
-    plant.photos.attach(io: file, filename: "plant.jpg", content_type: 'images/jpg')
-  end
-  plant.save
-end
-
+puts "Plants Creating"
 
 user = User.create!(email: 'tesfet4@teldst4.com', password: '123123', password_confirmation: '123123')
 plant = Plant.create!(species: "Monstera Deliciosa", price: 50, description: "A stunning Monstera Deliciosa with large, fenestrated leaves.", user_id: user.id)
@@ -384,3 +354,28 @@ plant.photos.attach(io: file, filename: "monstera.jpg", content_type: 'images/jp
 file = URI.open('https://i.etsystatic.com/19750945/r/il/56492d/4051095186/il_1588xN.4051095186_fxqx.jpg')
 plant.photos.attach(io: file, filename: "monstera.jpg", content_type: 'images/jpg')
 plant.save
+
+puts "WE did it!"
+
+# 5.times do
+#   plant = Plant.create!(species: "Swiss Cheese Plant", price: 150, description: "Lovely swiss cheese plant to rent, comes with a block of cheese", user_id: user.id)
+#   5.times do
+#     file = URI.open('https://www.gardeningexpress.co.uk/media/product/6e8/echinocactus-grusonii-golden-barrel-cactus-or-mother-in-laws-seat-c3f.jpg')
+#     plant.photos.attach(io: file, filename: "plant.jpg", content_type: 'images/jpg')
+#   end
+#   plant.save
+# end
+
+# user = User.create!(email: 'tesfet2@teldst2.com', password: '123123', password_confirmation: '123123')
+# plant = Plant.create!(species: "Swiss Cheese Plant", price: 150, description: "Lovely swiss cheese plant to rent, comes with a block of cheese", user_id: user.id)
+# 5.times do
+#   file = URI.open('https://www.gardeningknowhow.com/wp-content/uploads/2012/01/peace-lily-1.jpg')
+#   plant.photos.attach(io: file, filename: "plant.jpg", content_type: 'images/jpg')
+# end
+# plant.save
+
+# user = User.create!(email: 'tesfet3@teldst3.com', password: '123123', password_confirmation: '123123')
+# plant = Plant.create!(species: "Swiss Cheese Plant", price: 150, description: "Lovely swiss cheese plant to rent, comes with a block of cheese", user_id: user.id)
+# file = URI.open('https://www.gardeningknowhow.com/wp-content/uploads/2012/01/peace-lily-1.jpg')
+# plant.photos.attach(io: file, filename: "plant.jpg", content_type: 'images/jpg')
+# plant.save

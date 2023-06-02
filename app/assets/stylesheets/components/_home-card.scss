@@ -7,6 +7,7 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  background-color: rgb(245, 244, 243) !important;
 
   .card-img {
     height: 510px;
@@ -23,6 +24,8 @@
   object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
 }
 
 .card-img {
