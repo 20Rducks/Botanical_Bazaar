@@ -116,7 +116,34 @@
   text-decoration: none !important;
   color: white !important;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px 1px rgb(58, 86, 57);
+  background-color: rgb(58, 90, 64) !important;
+  transition: 0.3s;
+  border: 1px solid black;
+  &:hover {
+    text-decoration: none !important;
+    transform: scale(1.02);
+    box-shadow: 0px 0px 5px 2px rgb(103, 153, 100);
+  }
+  a {
+    text-decoration: none !important;
+    color: black;
+  }
+}
+
+.confirmation-buttons-modal {
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: space-evenly !important;
+  align-items: center;
+  font-size: 16px;
+  margin: 10px;
+  text-decoration: none !important;
+  width: 114px;
+  text-decoration: none !important;
+  color: white !important;
+  border-radius: 10px;
   background-color: #dad7cd !important;
   transition: 0.3s;
   border: 1px solid black;
