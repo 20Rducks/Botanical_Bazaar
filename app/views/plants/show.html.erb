@@ -19,30 +19,52 @@
 
     <%# Info Card %>
     <div class="col-sm-12 col-md-6 col-lg-6 info-card px-3">
-      <div class="card my-1 align-middle p-2 my-3">
+      <div class="card my-1 align-middle my-3">
         <div class="card-body">
-          <div>
-            <i class="fa-solid fa-user float-end mr-2 p-2 bg-secondary rounded-circle"></i>
+          <div class="card text-center">
+            <div class="card-header">
+            <div class=" d-inline-flex">
+              <h3 class="mr-3">Plant Owner</h3>
+              <i class="fa-solid fa-user float-end mr-2 p-2 p bg-secondary rounded-circle"></i>
+            </div>
           </div>
-          <div>
-            <h5 class="card-title">Species Name: <%= @plant.species %></h5>
-            <p class="card-text pr-5">Owned by: User-Name </p>
+            <p class="card-text pr-5 py-2"><%= @plant.user.email %> </p>
           </div>
         </div>
       </div>
-      <div class="card my-1 align-middle p-2 my-3">
+
+      <div class="card my-1 align-middle my-3">
         <div class="card-body">
-          <h5 class="card-title">Plant Description</h5>
-          <p class="card-text"><%= @plant.description %></p>
+          <div class="card text-center">
+            <div class="card-header">
+            <div class=" d-inline-flex">
+              <h3 class="mr-3">Plant Description</h3>
+            </div>
+          </div>
+            <p class="card-text center-text py-2 mx-4"><%= @plant.description%> </p>
+          </div>
         </div>
       </div>
-      <div class="card my-1 align-middle p-2 my-3">
+
+      <div class="card my-1 align-middle my-3">
         <div class="card-body">
-          <h5 class="card-title">Extra Information</h5>
-          <p class="card-text">This plant needs a lot of care, don't forget to walk it daily</p>
+          <div class="card text-center">
+            <div class="card-header">
+            <div class=" d-inline-flex">
+              <h3 class="mr-3">Extra Information</h3>
+            </div>
+          </div>
+            <p class="card-text text-center py-2 mx-4">This plant needs a lot of care, don't forget to walk it daily </p>
+          </div>
         </div>
       </div>
     </div>
+
+
+
+
+
+
 
       <%# Spacer for mid section %>
       <div class="col-sm-0 col-md-2 col-lg-2 d-flex">
@@ -85,12 +107,12 @@
                 </div>
 
                 <div class="con-modal" data-insert-in-list-target="modal2">
-                  <div class="btn btn-primary"><%= link_to "My Bookings", bookings_path %></div>
+                  <div class="button"><%= link_to "My Bookings", bookings_path %></div>
                 </div>
 
 
               </div>
-            <button data-action="click->toggle#fire" class="btn btn-lg btn-outline-primary mb-3">Book Me!</button>
+            <button data-action="click->toggle#fire" class="button mb-3">Book Now</button>
           </div>
         </div>
       </div>
