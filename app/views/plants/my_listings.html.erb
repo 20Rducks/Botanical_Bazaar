@@ -7,7 +7,7 @@
   <div class="row">
     <div class="jumbotron mt-3">
       <h2>My Listings</h2>
-      <%= link_to "Add a new listing", new_plant_path, class: "btn btn-flat btn btn-dark text-white" %>
+      <div><%= link_to "New Listing", new_plant_path, class: "confirmation-buttons"%></div>
     </div>
   </div>
 </div>
@@ -37,6 +37,7 @@
     </div>
   <% end %>
 <% end %>
+</div>
 </div>
 
 <%# Rendering Navbar %>
