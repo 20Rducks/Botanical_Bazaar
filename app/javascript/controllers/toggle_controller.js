@@ -6,6 +6,8 @@ export default class extends Controller {
   static targets = ["togglableElement"]
 
   fire() {
-    this.togglableElementTarget.classList.toggle("d-none");
+    setTimeout(() => {
+      this.togglableElementTarget.classList.toggle("d-none");
+    }, 500);
   }
 }

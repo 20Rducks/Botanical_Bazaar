@@ -1,15 +1,21 @@
 <%# Rendering Navbar %>
-<%= render "shared/navbar" %>
+<%= render "shared/navbarhome" %>
 
 <%# Basic Hero/Jumbo/Header %>
-<div class="container">
-  <div class="row">
-    <div class="jumbotron mt-2 p-4 text-center">
-      <h2>Botanical Bazaar</h2>
-      <p>Dive into the world of urban gardening, experience the joy of plant parenthood, and embrace the eco-friendly lifestyle.</p>
-    </div>
+<div class="headcontainer pb-4">
+  <img class="img-fluid mx-auto" id="myPlant" src="https://res.cloudinary.com/dgg6flpyq/image/upload/v1685547606/development/leov7jufekh6pmtnapqqs091sq5d.jpg" alt="Botanical Bazaar BG">
+  <div class="centered text-center px-5 py-4 d-flex">
+    <p>Dive into the world of urban gardening</p>
+    <p>Experience the joy of plant parenthood</p>
+    <p>Embrace the eco-friendly lifestyle</p>
+    <%= form_with url: plants_path, method: :get, class: "form-flex pt-4 align-center mx-auto" do |form| %>
+      <%= form.text_field :query, value: params[:query], class: "form-control me-2", placeholder: "Find a plant..." %>
+      <%= form.submit "Search", class: "btn btn-outline-success" %>
+    <% end %>
   </div>
 </div>
+
+
 
 <%# Main Card %>
 <div class="container">

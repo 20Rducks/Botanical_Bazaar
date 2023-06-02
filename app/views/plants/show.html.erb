@@ -11,19 +11,6 @@
   </div>
 </div>
 
-<div data-controller="insert-in-list">
-
-  <div class="c-modal show" data-insert-in-list-target="modal">
-      <%= cl_image_tag @plant.photos[0].key, class: "modal-img" %>
-      <p>£<%= @plant.price %> per day</p>
-      <%= render "bookings/form" %>
-  </div>
-
-    <div class="c-modal" data-insert-in-list-target="modal2">
-  </div>
-
-</div>
-
 <%# Render Main Card %>
 <%= render "shared/maincardshow" %>
 
@@ -65,21 +52,43 @@
       <div class="col-sm-12 col-md-4 col-lg-4 d-flex p-2 payment-card">
         <div class="card text-center">
           <div class="card-header">
-            <h3>Price per day</h3>
+            <h3>Plant Species</h3>
           </div>
           <div class="card-body">
             <h5 class="card-title"><%= @plant.species %></h5>
-            <p class="card-text">£<%= @plant.price %></p>
           </div>
         </div>
         <div class="card text-center">
           <div class="card-header">
-            <h3>Total Price</h3>
+            <h3>Price Per Day</h3>
           </div>
-          <div class="card-body" id="monuments" data-insert-in-list-target="items">
-            <h5 class="card-title"></h5>
+          <div class="card-body" >
+            <h5 class="card-title">£<%= @plant.price %></h5>
             <p class="card-text"></p>  <%# Add days %>
             </div>
+          </div>
+          <div class="text-center" data-controller="toggle">
+            <div data-controller="insert-in-list" data-insert-in-list-price-value='<%=@plant.price%>'>
+
+              <div class="c-modal show d-none" data-insert-in-list-target="modal" data-toggle-target="togglableElement">
+              <h5 class="card-title"><b><%= @plant.species %></b></h5>
+                    <h5>£<%= @plant.price %> per day</h5>
+                <%= cl_image_tag @plant.photos[0].key, class: "modal-img" %>
+                  <div class="modal-inner-text">
+                    <h5><div class="d-inline" data-insert-in-list-target='days'>0</div> days</h5>
+                    <h5>£<div class="d-inline" data-insert-in-list-target='total'>0</div> total</h5>
+                  </div>
+
+                <%= render "bookings/form" %>
+                </div>
+
+                <div class="c-modal" data-insert-in-list-target="modal2">
+                  <div class="btn btn-primary"><%= link_to "My Bookings", bookings_path %></div>
+                </div>
+
+
+              </div>
+            <button data-action="click->toggle#fire" class="btn btn-lg btn-outline-primary mb-3">Book Me!</button>
           </div>
         </div>
       </div>
