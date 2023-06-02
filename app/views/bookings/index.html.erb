@@ -1,5 +1,5 @@
 <%# Rendering Navbar %>
-<%= render "shared/navbar" %>
+<%= render "shared/navbar"%>
 
 
 <%# Basic Hero/Jumbo/Header %>
@@ -20,24 +20,28 @@
 
   <%# Card Layout %>
   <% @bookings.each do |booking| %>
+
   <%= link_to booking_path(booking) do %>
     <div class="col">
-      <div class="card home-card-img h-100">
+      <div class="card home-card-img mb-4">
         <%= cl_image_tag booking.plant.photos.first.key, class: "card-img-top"%>
         <div class="card-body">
           <h5 class="card-title"><%= booking.plant.species %></h5>
           <p class="card-text"><%= booking.plant.description %></p>
         </div>
         <div class="card-footer">
-          <small class="text-muted"><i class="fa-solid fa-sterling-sign fa-sm" style="color: #3a5139;"></i><%= booking.plant.price %></small>
+          <small class="text-muted">Price: £<%= booking.plant.price %></small>
         </div>
       </div>
     </div>
   <% end %>
   <% end %>
+
   </div>
 </div>
 
 
 <%# Rendering Navbar %>
 <%= render "shared/footer" %>
+
+          <%# <small class="text-muted"><i class="fa-solid fa-sterling-sign fa-sm" style="color: #3a5139;">£</i><%= @booking.plant.price %></small> %>

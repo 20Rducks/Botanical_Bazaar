@@ -22,7 +22,7 @@
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 rails-lg-3 row-cols-xl-4 g-4">
     <% @plants.each do |plant| %>
       <%= link_to plant_path(plant) do %>
-        <div class="col p-0">
+        <div class="col">
           <div class="card home-card-img mb-4">
             <span><img class="card-img-top" alt="..." src="<%= cl_image_path plant.photos.first.key%>"></span>
             <div class="card-body">
@@ -30,7 +30,7 @@
               <p class="card-text"><%= plant.description %></p>
             </div>
             <div class="card-footer">
-              <small class="text-muted"><i class="fa-solid fa-sterling-sign fa-sm" style="color: #3a5139;"></i><%= plant.price %></small>
+             <small class="text-white">Price: £<%= plant.price %></small>
             </div>
           </div>
         </div>

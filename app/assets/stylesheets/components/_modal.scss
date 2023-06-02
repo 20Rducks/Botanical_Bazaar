@@ -11,7 +11,7 @@
   // border: 1px solid grey;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 1px darkgrey;
-  background-color: rgb(190, 213, 181) !important;
+  background-color: #dad7cd !important;
   transition: transform .5s ease;
   &.show {
     transform: translate(-50%, -50%);
@@ -26,6 +26,26 @@
   }
 }
 
+.card-header {
+  background-color: rgb(58, 90, 64) !important;
+  h3 {
+    color: white;
+  }
+}
+
+
+.card-header {
+  background-color: rgb(58, 90, 64) !important;
+  h3 {
+    color: white;
+  }
+}
+
+
+
+
+
+
 .con-modal {
   padding: 20px;
   position: fixed;
@@ -39,7 +59,8 @@
   // border: 1px solid grey;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 1px darkgrey;
-  background-color: rgba(191, 227, 191, 1);
+  background-color: rgb(58, 90, 64) !important;
+  color: white;
   transition: transform .5s ease;
   &.show {
     transform: translate(-50%, -50%);
@@ -53,7 +74,6 @@
 
 
 
-
 .modal-btn {
 
 }
@@ -63,18 +83,24 @@
   display: flex;
   width: 100%;
   margin-bottom: 8px;
-  background-color: rgba(109, 187, 109, 0.4);
+  background-color: rgb(58, 90, 64) !important;
   box-shadow: 0px 0px 2px 1px darkgrey;
   border-radius: 10px;
   flex-direction: row;
   align-content: space-around;
   align-items: stretch;
+  color: white;
   justify-content: space-evenly;
 
   h5 {
     padding-top: 5px !important;
   }
 }
+
+
+
+
+
 
 .confirmation-buttons {
   display: flex;
@@ -86,12 +112,12 @@
   font-size: 16px;
   margin: 10px;
   text-decoration: none !important;
-  width: 100px;
+  width: 114px;
   text-decoration: none !important;
-  // height: 33px;
+  color: white !important;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 1px rgb(58, 86, 57);
-  background-color: #5da25d !important;
+  background-color: #dad7cd !important;
   transition: 0.3s;
   border: 1px solid black;
   &:hover {
@@ -104,17 +130,3 @@
     color: black;
   }
 }
-
-// .button {
-//   font-size: 16px;
-//   width: 89px;
-//   height: 33px;
-//   border-radius: 10px;
-//   box-shadow: 0px 0px 5px 1px rgb(103, 153, 100);
-//   background-color: #5da25d;
-//   transition: 0.3s;
-//   &:hover {
-//     transform: scale(1.02);
-//     box-shadow: 0px 0px 5px 2px rgb(103, 153, 100);
-//   }
-// }

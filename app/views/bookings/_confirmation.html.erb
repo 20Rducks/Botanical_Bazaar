@@ -3,7 +3,7 @@
   <p>You just booked a <%= booking.plant.species%>!</p>
   <%= cl_image_tag booking.plant.photos[0].key, class: "modal-img" %>
   <div class="align-center pb-5">
-    <button class="btn confirmation-buttons pr-2"><%= link_to "Keep Searching!", plants_path %></button>
+    <button class="btn confirmation-buttons pr-2"><%= link_to "Search", plants_path %></button>
     <button class="btn confirmation-buttons pl-2"><%= link_to "My Bookings", bookings_path %></button>
   </div>
 </div>

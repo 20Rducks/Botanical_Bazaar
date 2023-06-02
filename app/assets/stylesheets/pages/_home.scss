@@ -58,8 +58,9 @@ col {
   width: 90px;
   height: 33px;
   border-radius: 10px;
+  color: white;
   box-shadow: 0px 0px 5px 1px rgb(103, 153, 100);
-  background-color: #5da25d;
+  background-color: rgb(58, 90, 64) !important;
   transition: 0.3s;
   &:hover {
     transform: scale(1.02);
@@ -67,18 +68,18 @@ col {
   }
 }
 
+
+
+
 .button-modal {
   width: 94px;
   height: 33px;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 1px darkgrey;
-  background-color: rgb(93, 162, 93);
+  color: white;
+  background-color: rgb(58, 90, 64) !important;
   transition: 0.3s;
   &:hover {
     transform: scale(1.02);
   }
-}
-
-.card-footer {
-  background-color: rgb(163, 177, 18);
 }

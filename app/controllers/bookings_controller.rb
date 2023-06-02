@@ -22,7 +22,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     respond_to do |format|
       if @booking.save
-        format.html 
+        format.html
         format.json # Follows the classic Rails flow and look for a create.json view
 
       else
