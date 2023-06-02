@@ -4,7 +4,7 @@
 <%# Basic Hero/Jumbo/Header %>
 <div class="container">
   <div class="row">
-    <div class="jumbotron mt-2">
+    <div class="jumbotron mt-3">
       <h2><%= @plant.species %></h2>
       <p><%= @plant.description %></p>
     </div>
@@ -70,9 +70,11 @@
           <div class="text-center" data-controller="toggle">
             <div data-controller="insert-in-list" data-insert-in-list-price-value='<%=@plant.price%>'>
 
-              <div class="c-modal show d-none" data-insert-in-list-target="modal" data-toggle-target="togglableElement">
-              <h5 class="card-title"><b><%= @plant.species %></b></h5>
-                    <h5>£<%= @plant.price %> per day</h5>
+              <div class="c-modal show d-none pb-2" data-insert-in-list-target="modal" data-toggle-target="togglableElement">
+              <div class="modal-inner-text">
+                <h5 class="card-title"><b><%= @plant.species %></b></h5>
+                <h5>£<%= @plant.price %> per day</h5>
+              </div>
                 <%= cl_image_tag @plant.photos[0].key, class: "modal-img" %>
                   <div class="modal-inner-text">
                     <h5><div class="d-inline" data-insert-in-list-target='days'>0</div> days</h5>
@@ -82,7 +84,7 @@
                 <%= render "bookings/form" %>
                 </div>
 
-                <div class="c-modal" data-insert-in-list-target="modal2">
+                <div class="con-modal" data-insert-in-list-target="modal2">
                   <div class="btn btn-primary"><%= link_to "My Bookings", bookings_path %></div>
                 </div>
 

@@ -15,14 +15,15 @@ export default class extends Controller {
 
   updatePrice() {
 
-    // if (inputs[0].value !== undefined && inputs[1].value !== undefined) {
-      const inputs = document.querySelectorAll('.flatpickr-input');
+    const inputs = document.querySelectorAll('.flatpickr-input');
+    console.log(inputs)
+    if (inputs[0].value !== "" && inputs[1].value !== "") {
       const startDate = new Date(inputs[0].value)
       const endDate = new Date(inputs[1].value)
       const days = (endDate - startDate) / 3_600_000 / 24;
       this.daysTarget.innerHTML = days
       this.totalTarget.innerHTML = days * parseInt(this.priceValue)
-    // }
+    }
   }
 
   send(event) {
