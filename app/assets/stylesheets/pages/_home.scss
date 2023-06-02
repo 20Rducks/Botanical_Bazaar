@@ -1,10 +1,4 @@
 // Specific CSS for your home-page
-a {
-  text-decoration: none !important;
-    &:hover {
-      text-decoration: none !important;
-    }
-  }
 
 col {
   padding-left: 0;
@@ -25,13 +19,16 @@ col {
   position: relative;
   text-align: center;
   color: white;
+  img {
+    max-height: 590px;
+  }
 }
 
 .centered {
   position: absolute;
   flex-direction: column;
   width: 35%;
-  height: 40%;
+  height: 47%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

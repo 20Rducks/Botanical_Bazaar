@@ -5,14 +5,15 @@
 <%# Basic Hero/Jumbo/Header %>
 <div class="container">
   <div class="row">
-    <div class="jumbotron mt-2 p-4">
+    <div class="jumbotron mt-3">
       <h2>My Listings</h2>
+      <%= link_to "Add a new listing", new_plant_path, class: "btn btn-flat btn btn-dark text-white" %>
     </div>
   </div>
 </div>
 
 <%# Card Group Layout %>
-<div class="container">
+<div class="container my-listings">
   <div class="row row-cols-2 row-cols-md-3 mb-4 row-cols-lg-4 g-4">
 
 
@@ -35,16 +36,6 @@
     </div>
   <% end %>
 <% end %>
-</div>
-
-<%# Add new listing button, taking you to new listing/new plant page%>
-<div class="container">
-  <div class="row">
-      <div class="jumbotron mt-2 p-4">
-        <%= link_to "Add a new listing", new_plant_path, class: "btn btn-flat btn btn-dark text-white" %>
-      </div>
-    </div>
-    </div>
 </div>
 
 <%# Rendering Navbar %>
